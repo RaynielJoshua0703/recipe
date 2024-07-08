@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: aliceblue;
+}
+/* HEADER */
+header {
+    width: 100%;
+    padding: 1.5rem 5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    background-color: rgba(2, 91, 168, .2);
+}
+.logo {
+    width: 6rem;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .2));
+}
+a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.home {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    color: black;
+}
+.share {
+    background-color: black;
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+div {
+    position: relative;
+    width: 100%;
+}
+.fa-magnifying-glass {
+    position: absolute;
+    left: 1rem;
+    top: .9rem;
+    font-size: 1.2rem;
+    color: gray;
+}
+.fa-x {
+    position: absolute;
+    left: 94%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    background-color: none;
+}
+input[type = text] {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+input[type = text]:focus {
+    border: 2px solid rgb(0, 0, 0);
+}
+.fa-user {
+    color: white;
+    font-size: 1.3rem;
+    padding: .7rem .8rem;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgb(2, 91, 168);
+}
+.fa-user:hover {
+    color: aliceblue;
+    background-color: black;
+}
+.fa-caret-down {
+    padding: .3rem .6rem;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+}
+.fa-caret-down:hover {
+    color: #fff;
+    background-color: rgb(2, 91, 168);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+.sign_out {
+    position: absolute;
+    top: 13%;
+    left: 90.3%;
+    background-color: rgb(2, 91, 168);
+    opacity: 0;
+    width: auto;
+    padding: .5rem;
+    border-radius: .6rem;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: opacity 100ms linear, background-color 200ms linear;
+}
+.sign_out.visible {
+    opacity: 1;
+}
+.sign_out:hover {
+    background-color: black;
+}
+.signout {
+    color: white;
+}
+
+/* MAIN */
+main {
+    padding: 4rem 5rem 2rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.image_preview {
+    display: none;
+    width: 30%;
+    height: 20rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    object-fit: cover;
+}
+.error {
+    width: 30%;
+    background-color: rgba(255, 0, 0, .3);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    color: #fff;
+}
+.food_name, .cuisine_type, .ingredients, .instructions, .upload_image {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+}
+input[type = file] {
+    display: none;
+}
+label {
+    background-color: rgb(2, 91, 168);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    transition: background-color 200ms linear;
+}
+label:hover {
+    background-color: #000;
+    color: #fff;
+}
+#food, #cuisine {
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 30%;
+    margin-top: 1rem;
+}
+textarea {
+    margin-top: 1rem;
+    width: 100%;
+    height: 30vh;
+    padding: 1rem;
+    font-size: 1.2rem;
+    resize: none;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+}
+input[type = submit] {
+    width: 15%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: rgb(2, 91, 168);
+    border: none;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+    transition: background-color 200ms linear;
+    cursor: pointer;
+}
+input[type = submit]:hover {
+    background-color: black;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(2, 91, 168);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}

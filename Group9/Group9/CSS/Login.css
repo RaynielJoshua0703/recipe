@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: aliceblue;
+    height: 100vh;
+}
+header {
+    padding: 1.5rem 5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 6rem;
+    height: 6rem;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, .4));
+}
+.web_title {
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+span {
+    color: rgb(2, 91, 168);
+}
+ul {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    list-style: none;
+}
+a, .sign_in {
+    font-size: 1.2rem;
+    position: relative;
+    color: rgb(2, 91, 168);
+    text-shadow: 0 0 3px rgba(0 0 0 / .3);
+    transition: color 200ms linear;
+}
+a:hover, .sign_in:hover {
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+.sign_in {
+    cursor: pointer;
+}
+.sign_up {
+    color: white;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: rgb(2, 91, 168);
+    border-radius: .2rem;
+    border: none;
+    box-shadow: 0px 0 2px rgba(0, 0, 0, .5);
+    transition: background-color 200ms linear;
+}
+.sign_up:hover {
+    background-color: black;
+}
+
+/* FOR SIGN IN */
+#signin {
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    pointer-events: none;
+    transition: opacity 150ms linear;
+    background-color: rgba(0, 0, 0, .5);
+}
+.signin_modal {
+    background-color: aliceblue;
+    height: 60vh;
+    width: 30vw;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0 0 0 / .5);
+}
+.sign-in-title {
+    margin-top: 8%;
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    text-shadow: 2px 0 5px rgba(0, 0, 0, .6);
+}
+.sign_in_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+.si_email, .si_password, .sign_in_btn {
+    width: 80%;
+    height: 50%;
+    padding: .5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: .3rem;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+}
+.si_email:focus, .si_password:focus {
+    background-color: rgba(2, 91, 168, .2);
+}
+.sign_in_btn {
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    background-color: rgb(2, 91, 168);
+    color: white;
+    transition: background-color 200ms linear;
+}
+.sign_in_btn:hover {
+    background-color: black;
+    color: white;
+}
+.sign_In_showPassword {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    padding-inline: 10%;
+}
+
+/* FOR SIGN UP */
+#signup {
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    pointer-events: none;
+    transition: opacity 150ms linear;
+    background-color: rgba(0, 0, 0, .5);
+}
+.signup_modal {
+    background-color: aliceblue;
+    height: 70%;
+    width: 30%;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0 0 0 / .5);
+}
+.sign-up-title {
+    color: var(--signup-signin-title-color);
+    text-align: center;
+    margin-block-start: 1rem;
+    font-size: 3rem;
+    text-shadow: 2px 0 5px rgba(0, 0, 0, .6);
+}
+.sign_up_form {
+    margin-block-start: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.fname, .lname {
+    width: 41.3%;
+    height: 2.5rem;
+    padding: .5rem;
+    border-radius: .3rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+}
+.fname:focus, .lname:focus {
+    background-color: rgba(2, 91, 168, .2);
+}
+.phone-email, .password, .birthday, .submit {
+    width: 86.3%;
+    height: 2.5rem;
+    padding: .5rem;
+    border-radius: .3rem;
+    outline: none;
+    border: 2px solid #eea1cd;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+}
+.phone-email:focus, .password:focus, .birthday:focus {
+    background-color: rgba(2, 91, 168, .2);
+}
+.submit {
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    background-color: rgb(2, 91, 168);
+    color: white;
+    transition: background-color 200ms linear;
+}
+.submit:hover {
+    background-color: #000;
+}
+.sign_Up_showPassword, .sign_Up_showConfirmPassword {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    padding-inline: 7%;
+}
+
+/* SIGN IN AND SIGN UP SIMILARITIES */
+.fa-solid {
+    color: rgb(2, 91, 168);
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 5% 0 0 5%;
+    text-shadow: 0px 0 5px rgba(0, 0, 0, .6);
+    transition: color 200ms linear;
+}
+.fa-solid:hover {
+    color: black;
+}
+input[type = checkbox] {
+    position: relative;
+    appearance: none;
+    background-color: #fff;
+    border-radius: .2rem;
+    margin-right: 2%;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0 0 2px rgba(0 0 0 / .5);
+}
+input[type = checkbox]:checked {
+    background-color: black;
+}
+label {
+    color: #000;
+    text-shadow: 2px 0 5px rgba(0, 0, 0, .3);
+}
+
+/* MAIN */
+section {
+    display: flex;
+    align-items: center;
+}
+.text {
+    margin-left: 5rem;
+    text-shadow: 0 0 3px rgba(0 0 0 / .5);
+}
+.title {
+    font-size: 3rem;
+}
+p {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    text-align: justify;
+}
+.view {
+    cursor: pointer;
+    color: white;
+    margin-top: 1rem;
+    padding: .7rem 3rem;
+    font-size: 1.2rem;
+    background-color: rgb(2, 91, 168);
+    border: none;
+    border-radius: .2rem;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    transition: background-color 200ms linear;
+}
+.view:hover {
+    background-color: black;
+}
+img {
+    height: 35rem;
+    filter: drop-shadow(10px 10px 20px rgba(2, 91, 168, .4));
+}

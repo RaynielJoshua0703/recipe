@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: aliceblue;
+}
+/* HEADER */
+header {
+    width: 100%;
+    padding: 1.5rem 5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo {
+    width: 6rem;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .2));
+}
+a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.share, .home {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    color: black;
+}
+div {
+    position: relative;
+    width: 100%;
+}
+.fa-magnifying-glass {
+    position: absolute;
+    left: 1rem;
+    top: .9rem;
+    font-size: 1.2rem;
+    color: gray;
+}
+.fa-x {
+    position: absolute;
+    left: 94%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    background-color: none;
+}
+input[type = text] {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+input[type = text]:focus {
+    border: 2px solid rgb(0, 0, 0);
+}
+.fa-user {
+    font-size: 1.3rem;
+    padding: .7rem .8rem;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgba(2, 91, 168, 1);
+    color: aliceblue;
+}
+.fa-user:hover {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 1);
+}
+.fa-caret-down {
+    padding: .3rem .6rem;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+}
+.fa-caret-down:hover {
+    color: #fff;
+    background-color: rgb(2, 91, 168);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+.sign_out {
+    position: absolute;
+    top: 13%;
+    left: 90.3%;
+    background-color: rgb(2, 91, 168);
+    opacity: 0;
+    width: auto;
+    padding: .5rem;
+    border-radius: .6rem;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: opacity 100ms linear, background-color 200ms linear;
+}
+.sign_out.visible {
+    opacity: 1;
+}
+.sign_out:hover {
+    background-color: black;
+}
+.signout {
+    color: white;
+}
+
+/* MAIN */
+main {
+    padding: 2rem 5rem 2rem;
+}
+.prof {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img {
+    width: 15%;
+    height: 65%;
+    border-radius: 20rem;
+    background-color: rgb(2, 91, 168);
+    overflow: hidden;
+    
+    background-repeat: no-repeat;
+    background-size: 15rem;
+    object-fit: contain;
+    background-position: center;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, .5);
+}
+.post-image{
+    width: 100%;
+    height: 100%;
+}
+.user_name {
+    margin-top: 1rem;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .6);
+}
+.favorites {
+    height: auto;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+}
+.fav_title {
+    padding-left: 1.5rem;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+.favorite {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.fav {
+    position: relative;
+    top: 0;
+    width: 25.4rem;
+    min-width: 25.4rem;
+    height: 100%;
+    background-position: center;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .17);
+    transition: top 200ms linear;
+}
+.fav:hover {
+    top: -10px;
+}
+.image {
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+    background-color: rgb(2, 91, 168);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.food_img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+.food {
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0 0 3rem 3rem;
+}
+.food_name {
+    color: #000;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+.food_name:hover {
+    color: rgb(2, 91, 168);
+}
+.unlike {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 8%;
+    left: 82%;
+    z-index: 999;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    transition: color 200ms linear;
+}
+.unlike:hover {
+    color: red;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(2, 91, 168);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}

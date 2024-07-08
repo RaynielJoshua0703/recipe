@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: aliceblue;
+    height: 100vh;
+}
+/* HEADER */
+header {
+    width: 100%;
+    padding: 1.5rem 5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo {
+    width: 6rem;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .2));
+}
+a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.share {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    color: black;
+}
+.home {
+    color: white;
+    background-color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    transition: background-color 200ms linear;
+}
+.home:hover {
+    background-color: black;
+}
+form {
+    position: relative;
+    width: 100%;
+}
+.fa-magnifying-glass {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 1rem;
+    top: .9rem;
+    font-size: 1.2rem;
+    color: gray;
+}
+.fa-x {
+    position: absolute;
+    left: 94%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    background-color: none;
+}
+input[type = text] {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+input[type = text]:focus {
+    border: 2px solid rgb(0, 0, 0);
+}
+.fa-user {
+    color: white;
+    font-size: 1.3rem;
+    padding: .7rem .8rem;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgb(2, 91, 168);
+}
+.fa-user:hover {
+    color: aliceblue;
+    background-color: black;
+}
+.fa-caret-down {
+    padding: .3rem .6rem;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+}
+.fa-caret-down:hover {
+    color: #fff;
+    background-color: rgb(2, 91, 168);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+.sign_out {
+    position: absolute;
+    top: 13%;
+    left: 90.3%;
+    background-color: rgb(2, 91, 168);
+    opacity: 0;
+    width: auto;
+    padding: .5rem;
+    border-radius: .6rem;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: opacity 100ms linear, background-color 200ms linear;
+}
+.sign_out.visible {
+    opacity: 1;
+}
+.sign_out:hover {
+    background-color: black;
+}
+.signout {
+    color: white;
+}
+
+/* MAIN */
+main {
+    padding: 2rem 5rem 2rem;
+}
+.recommendation {
+    width: 100%;
+    background-color: rgb(2, 91, 168);
+    height: 25rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    overflow: hidden;
+}
+.recommend_food {
+    width: 60%;
+    background-color: white;
+    padding: 3rem;
+}
+.food_title {
+    font-size: 3rem;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.food_desc {
+    font-size: 1.5rem;
+    text-align: justify;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    word-break: break-all;
+}
+.stars {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: rgb(2, 91, 168);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+.recommend_food_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.foods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.failed {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 0, 0, .5);
+    padding: 2rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+}
+.food_dis {
+    position: relative;
+    top: 0;
+    width: 25.4rem;
+    min-width: 25.4rem;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+    transition: top 200ms linear;
+}
+.section_2 {
+    background-color: rgb(2, 91, 168);
+    color: white;
+    height: 10rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.section_2_food_title {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .6);
+}
+.food_dis:hover {
+    top: -10px;
+}
+.image {
+    width: 100%;
+    background-color: rgb(2, 91, 168);
+    border-radius: 3rem 3rem 0 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.food_image {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+.food {
+    padding: 1.2rem;
+    background-color: white;
+    border-radius: 0 0 3rem 3rem;
+    display: flex;
+    justify-content: center;
+}
+.food_name {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    color: black;
+}
+.food_name:hover {
+    color: rgb(2, 91, 168);
+}
+.cuisine_type {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+/* FOOTER */
+footer {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(2, 91, 168);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}

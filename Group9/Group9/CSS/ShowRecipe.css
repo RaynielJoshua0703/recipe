@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: aliceblue;
+}
+section {
+    padding: 2rem 5rem;
+}
+.fa-arrow-left {
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    color: rgb(2, 91, 168);
+    transition: color 200ms linear;
+}
+.fa-arrow-left:hover {
+    color: #000;
+}
+.food_img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+.food {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+.title {
+    text-align: center;
+    font-size: 3rem;
+}
+.food_detail {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+p {
+    font-size: 1.5rem;
+    word-break: break-all;
+}
+.about_food {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    position: absolute;
+    top: -20%;
+    left: 95%;
+}
+.fa-heart-circle-plus {
+    font-size: 2.5rem;
+    color: rgb(2, 91, 168);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    transition: color 200ms linear;
+}
+.like {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.fa-heart-circle-plus:hover {
+    color:red;
+}
+footer {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(2, 91, 168);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
